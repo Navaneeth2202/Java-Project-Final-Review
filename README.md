@@ -1,2 +1,2 @@
 # Java-Project-Final-Review
- This is the Java Project by Rahul and Navaneeth.
+A path finding algorithm by Rahul and Navaneeth.
