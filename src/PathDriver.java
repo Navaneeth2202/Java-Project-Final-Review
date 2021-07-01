@@ -35,7 +35,6 @@ public class PathDriver {
 
     Node[][] map;
     Algorithm Alg = new Algorithm(this);
-    Random r = new Random();
 
     JLabel toolL = new JLabel("Toolbox");
     JLabel checkL = new JLabel("Checks: " + checks);
@@ -106,11 +105,12 @@ public class PathDriver {
 
         if (startx > -1 && starty > -1) {    //RESET THE START AND FINISH
             map[startx][starty] = new Node(0, startx, starty);
-            map[startx][starty].setJumps(0); //?why do we need this
+            map[startx][starty].setJumps(0);
         }
 
         if (finishx > -1 && finishy > -1)
             map[finishx][finishy] = new Node(1, finishx, finishy);
+
         reset();    //RESET SOME VARIABLES
     }//end of resetMap()
 
