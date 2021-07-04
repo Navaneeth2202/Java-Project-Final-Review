@@ -7,7 +7,7 @@ public class Algorithm {
     public Algorithm(PathDriver p){
         this.p=p;
     }
-
+//actual algo start
     public void Dijkstra() {
         ArrayList<PathDriver.Node> priority = new ArrayList<PathDriver.Node>();
         priority.add(p.map[p.startx][p.starty]);
