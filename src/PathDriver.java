@@ -13,8 +13,8 @@ public class PathDriver {
     JFrame frame;
 
     //creating General Variables
-    public int cells = 50;
-    public int delay = 10;
+    public int cells = 40;
+    public int delay = 5;
     public int startx = -1;
     public int starty = -1;
     public int finishx = -1;
@@ -54,9 +54,9 @@ public class PathDriver {
 
     Border blackline = BorderFactory.createLineBorder(Color.black);
 
-    Color wall = new Color(63, 55, 201);
-    Color search = new Color(155, 93, 229);
-    Color route = new Color(0, 245, 212);
+    Color wall = new Color(40, 44, 52);
+    Color search = new Color(0, 185, 189);
+    Color route = new Color(255, 65, 151);
     Color startc = new Color(239, 71, 111);
     Color finishc = new Color(255, 209, 102);
 
@@ -185,7 +185,7 @@ public class PathDriver {
                             break;
                     }
                     g.fillRect(x * CSIZE, y * CSIZE, CSIZE, CSIZE); //gives fill color to the rectangles
-                    g.setColor(search);
+                    //g.setColor(search);
                     g.drawRect(x * CSIZE, y * CSIZE, CSIZE, CSIZE); //draws/makes the grid box visible
 
                 }

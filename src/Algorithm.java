@@ -36,17 +36,22 @@ public class Algorithm {
                 int xbound = current.getX() + a;
                 int ybound = current.getY() + b;
                 if ((xbound > -1 && xbound < p.cells) && (ybound > -1 && ybound < p.cells)) {
-                    PathDriver.Node neighbor = p.map[xbound][ybound];
-                    if ((neighbor.getJumps() == -1 || neighbor.getJumps() > jumps) && neighbor.getType() != 2) {
-                        explore(neighbor, current.getX(), current.getY(), jumps);
-                        explored.add(neighbor);
+                    if ((a == -1 && b == -1) || (a == 1 && b == -1) || (a == -1 && b == 1) || (a == 1 && b == 1)) {
+
+                    } else {
+                        PathDriver.Node neighbor = p.map[xbound][ybound];
+                        if ((neighbor.getJumps() == -1 || neighbor.getJumps() > jumps) && neighbor.getType() != 2) {
+                            explore(neighbor, current.getX(), current.getY(), jumps);
+                            explored.add(neighbor);
+                        }
                     }
                 }
+
+
             }
         }
         return explored;
     }
-
     public void explore(PathDriver.Node current, int lastx, int lasty, int jumps) {
         if (current.getType() != 0 && current.getType() != 1)
             current.setType(4);
