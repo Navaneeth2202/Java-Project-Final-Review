@@ -56,9 +56,9 @@ public class PathDriver {
 
     Color wall = new Color(40, 44, 52);
     Color search = new Color(0, 185, 189);
-    Color route = new Color(255, 65, 151);
+    Color finishc = new Color(255, 65, 151);
     Color startc = new Color(239, 71, 111);
-    Color finishc = new Color(255, 209, 102);
+    Color route = new Color(255, 209, 102);
 
     public static void main(String[] args) {
 
